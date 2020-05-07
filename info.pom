@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <name>invoke-by-reflection</name>
+  <description>Reimplementation of java.lang.invoke.* using Reflection</description>
+  <url>https://github.com/mobanisto/invoke-by-reflection</url>
+</project>
