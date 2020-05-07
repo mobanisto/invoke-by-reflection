@@ -2,6 +2,7 @@ package de.mobanisto.invoke;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class MethodHandle {
@@ -33,31 +34,39 @@ public class MethodHandle {
     public Object invoke(Object... args) throws Throwable {
         switch (type) {
             case CONSTRUCTOR: {
-                Class<?>[] types = constructor.getParameterTypes();
-                Class<?> lastType = types[types.length - 1];
-
-                if (!lastType.isArray()) {
-                    return constructor.newInstance(args);
-                }
-
-                // last argument type is array
-                Object[] callParameters = buildVarArgParameters(types, args);
-                return constructor.newInstance(callParameters);
+                return invokeConstructor(args);
             }
             case METHOD: {
-                Class<?>[] types = method.getParameterTypes();
-                Class<?> lastType = types[types.length - 1];
-
-                if (!lastType.isArray()) {
-                    return method.invoke(null, args);
-                }
-
-                // last argument type is array
-                Object[] callParameters = buildVarArgParameters(types, args);
-                return method.invoke(null, new Object[]{args});
+                return invokeMethod(args);
             }
         }
         return null;
+    }
+
+    private Object invokeMethod(Object[] args) throws InvocationTargetException, IllegalAccessException {
+        Class<?>[] types = method.getParameterTypes();
+        Class<?> lastType = types[types.length - 1];
+
+        if (!lastType.isArray()) {
+            return method.invoke(null, args);
+        }
+
+        // last argument type is array
+        Object[] callParameters = buildVarArgParameters(types, args);
+        return method.invoke(null, new Object[]{args});
+    }
+
+    private Object invokeConstructor(Object[] args) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?>[] types = constructor.getParameterTypes();
+        Class<?> lastType = types[types.length - 1];
+
+        if (!lastType.isArray()) {
+            return constructor.newInstance(args);
+        }
+
+        // last argument type is array
+        Object[] callParameters = buildVarArgParameters(types, args);
+        return constructor.newInstance(callParameters);
     }
 
     private Object[] buildVarArgParameters(Class<?>[] types, Object[] args) {
