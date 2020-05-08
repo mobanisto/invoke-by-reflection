@@ -17,6 +17,10 @@ public class TestBinarySearch extends BaseTest {
                 "binarySearch", java.lang.invoke.MethodType.methodType(
                         int.class, double[].class, int.class, int.class, double.class));
         Assert.assertEquals("MethodHandle(double[],int,int,double)int", search.toString());
+
+        Assert.assertEquals("MethodHandle(int,int,double)int",
+                java.lang.invoke.MethodHandles.insertArguments(
+                        search, 0, new double[]{1, 2, 3, 4, 5}));
     }
 
     @Test
@@ -25,6 +29,10 @@ public class TestBinarySearch extends BaseTest {
                 "binarySearch", MethodType.methodType(
                         int.class, double[].class, int.class, int.class, double.class));
         Assert.assertEquals("MethodHandle(double[],int,int,double)int", search.toString());
+
+        Assert.assertEquals("MethodHandle(int,int,double)int",
+                MethodHandles.insertArguments(
+                        search, 0, new double[]{1, 2, 3, 4, 5}));
     }
 
 }
