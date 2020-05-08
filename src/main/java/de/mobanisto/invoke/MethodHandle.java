@@ -1,9 +1,6 @@
 package de.mobanisto.invoke;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.reflect.*;
 
 public class MethodHandle {
 
@@ -84,6 +81,36 @@ public class MethodHandle {
         }
         callParameters[types.length - 1] = varargs;
         return callParameters;
+    }
+
+    @Override
+    public String toString() {
+        switch (type) {
+            case CONSTRUCTOR: {
+                // TODO: implement
+            }
+            case METHOD: {
+                StringBuilder buffer = new StringBuilder();
+                buffer.append("MethodHandle(");
+                Parameter[] parameters = method.getParameters();
+                for (int i = 0; i < method.getParameterCount(); i++) {
+                    Parameter parameter = parameters[i];
+                    if (parameter.getType().isArray()) {
+                        buffer.append(parameter.getType().getComponentType());
+                        buffer.append("[]");
+                    } else {
+                        buffer.append(parameter.getType());
+                    }
+                    if (i < method.getParameterCount() - 1) {
+                        buffer.append(",");
+                    }
+                }
+                buffer.append(")");
+                buffer.append(method.getReturnType());
+                return buffer.toString();
+            }
+        }
+        return super.toString();
     }
 
 }
