@@ -16,13 +16,17 @@ public class TestException3 {
 
         System.out.println(exceptionConstructor);
 
+        exceptionConstructor = MethodHandles.insertArguments(exceptionConstructor, 0, "test");
+
+        System.out.println(exceptionConstructor);
+
         MethodHandle exceptionThrower = MethodHandles.throwException(void.class, IOException.class);
 
         System.out.println(exceptionThrower);
 
         MethodHandle handle = MethodHandles.foldArguments(exceptionThrower, exceptionConstructor);
 
-        handle.invoke("test");
+        handle.invoke();
     }
 
 }
