@@ -26,7 +26,7 @@
 package com.mobanisto.invoke;
 
 import jdk.internal.org.objectweb.asm.*;
-import sun.invoke.util.BytecodeDescriptor;
+import com.mobanisto.sun.invoke.util.BytecodeDescriptor;
 import sun.misc.Unsafe;
 import sun.security.action.GetPropertyAction;
 

@@ -26,8 +26,8 @@
 package com.mobanisto.invoke;
 
 import java.util.Arrays;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * A method handle whose invocation behavior is determined by a target.

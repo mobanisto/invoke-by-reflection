@@ -32,7 +32,7 @@ import sun.misc.Unsafe;
 /**
  * This class consists exclusively of static names internal to the
  * method handle implementation.
- * Usage:  {@code import static java.lang.invoke.MethodHandleStatics.*}
+ * Usage:  {@code import static com.mobanisto.invoke.MethodHandleStatics.*}
  * @author John Rose, JSR 292 EG
  */
 /*non-public*/ class MethodHandleStatics {

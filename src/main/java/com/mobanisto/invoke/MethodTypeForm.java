@@ -25,9 +25,9 @@
 
 package com.mobanisto.invoke;
 
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.Wrapper;
 import java.lang.ref.SoftReference;
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * Shared information for a group of method types, which differ

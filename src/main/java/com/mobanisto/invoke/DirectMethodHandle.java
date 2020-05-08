@@ -28,16 +28,16 @@ package com.mobanisto.invoke;
 import sun.misc.Unsafe;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import sun.invoke.util.VerifyAccess;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.MethodTypeForm.*;
-import static java.lang.invoke.MethodHandleStatics.*;
+import com.mobanisto.sun.invoke.util.VerifyAccess;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.MethodTypeForm.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
-import sun.invoke.util.ValueConversions;
-import sun.invoke.util.VerifyType;
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.ValueConversions;
+import com.mobanisto.sun.invoke.util.VerifyType;
+import com.mobanisto.sun.invoke.util.Wrapper;
 
 /**
  * The flavor of method handle which implements a constant reference

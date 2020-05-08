@@ -31,12 +31,12 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.Wrapper;
 import java.lang.reflect.Field;
 
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
 
 /**
  * The symbolic, non-executable form of a method handle's invocation semantics.

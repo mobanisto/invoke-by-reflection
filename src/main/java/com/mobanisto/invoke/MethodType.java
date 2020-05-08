@@ -25,7 +25,7 @@
 
 package com.mobanisto.invoke;
 
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.Wrapper;
 import java.lang.ref.WeakReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
@@ -35,9 +35,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
-import sun.invoke.util.BytecodeDescriptor;
-import static java.lang.invoke.MethodHandleStatics.*;
-import sun.invoke.util.VerifyType;
+import com.mobanisto.sun.invoke.util.BytecodeDescriptor;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import com.mobanisto.sun.invoke.util.VerifyType;
 
 /**
  * A method type represents the arguments and return type accepted and

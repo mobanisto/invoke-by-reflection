@@ -25,11 +25,11 @@
 
 package com.mobanisto.invoke;
 
-import java.lang.invoke.MethodHandles.Lookup;
+import com.mobanisto.invoke.MethodHandles.Lookup;
 import java.lang.reflect.Field;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
 
 /**
  * The JVM interface for the method handles package is all here.

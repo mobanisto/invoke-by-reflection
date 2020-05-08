@@ -27,9 +27,9 @@ package com.mobanisto.invoke;
 
 import java.lang.reflect.*;
 import java.util.*;
-import java.lang.invoke.MethodHandleNatives.Constants;
-import java.lang.invoke.MethodHandles.Lookup;
-import static java.lang.invoke.MethodHandleStatics.*;
+import com.mobanisto.invoke.MethodHandleNatives.Constants;
+import com.mobanisto.invoke.MethodHandles.Lookup;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * A symbolic reference obtained by cracking a direct method handle

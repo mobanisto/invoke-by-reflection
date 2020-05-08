@@ -27,8 +27,8 @@ package com.mobanisto.invoke;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
 
 /** Working storage for an LF that is being transformed.
  *  Similarly to a StringBuffer, the editing can take place in multiple steps.

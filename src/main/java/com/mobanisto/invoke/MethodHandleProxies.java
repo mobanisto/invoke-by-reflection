@@ -28,14 +28,14 @@ package com.mobanisto.invoke;
 import java.lang.reflect.*;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import sun.invoke.WrapperInstance;
+import com.mobanisto.sun.invoke.WrapperInstance;
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
-import sun.reflect.CallerSensitive;
-import sun.reflect.Reflection;
-import sun.reflect.misc.ReflectUtil;
-import static java.lang.invoke.MethodHandleStatics.*;
+import com.mobanisto.sun.reflect.CallerSensitive;
+import com.mobanisto.sun.reflect.Reflection;
+import com.mobanisto.sun.reflect.misc.ReflectUtil;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * This class consists exclusively of static methods that help adapt

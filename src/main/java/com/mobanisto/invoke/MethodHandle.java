@@ -28,7 +28,7 @@ package com.mobanisto.invoke;
 
 import java.util.*;
 
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * A method handle is a typed, directly executable reference to an underlying method,

@@ -31,15 +31,15 @@ import java.lang.reflect.Modifier;
 
 import jdk.internal.org.objectweb.asm.*;
 
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
 
-import sun.invoke.util.VerifyAccess;
-import sun.invoke.util.VerifyType;
-import sun.invoke.util.Wrapper;
-import sun.reflect.misc.ReflectUtil;
+import com.mobanisto.sun.invoke.util.VerifyAccess;
+import com.mobanisto.sun.invoke.util.VerifyType;
+import com.mobanisto.sun.invoke.util.Wrapper;
+import com.mobanisto.sun.reflect.misc.ReflectUtil;
 
 /**
  * Code generation backend for LambdaForm.

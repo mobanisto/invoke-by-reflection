@@ -25,8 +25,8 @@
 
 package com.mobanisto.invoke;
 
-import sun.invoke.util.BytecodeDescriptor;
-import sun.invoke.util.VerifyAccess;
+import com.mobanisto.sun.invoke.util.BytecodeDescriptor;
+import com.mobanisto.sun.invoke.util.VerifyAccess;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -38,8 +38,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 import java.util.Objects;
 
 /**

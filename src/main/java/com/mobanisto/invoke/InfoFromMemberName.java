@@ -27,9 +27,9 @@ package com.mobanisto.invoke;
 
 import java.security.*;
 import java.lang.reflect.*;
-import java.lang.invoke.MethodHandleNatives.Constants;
-import java.lang.invoke.MethodHandles.Lookup;
-import static java.lang.invoke.MethodHandleStatics.*;
+import com.mobanisto.invoke.MethodHandleNatives.Constants;
+import com.mobanisto.invoke.MethodHandles.Lookup;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /*
  * Auxiliary to MethodHandleInfo, wants to nest in MethodHandleInfo but must be non-public.

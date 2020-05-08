@@ -31,18 +31,18 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import sun.invoke.util.ValueConversions;
-import sun.invoke.util.VerifyAccess;
-import sun.invoke.util.Wrapper;
-import sun.reflect.CallerSensitive;
-import sun.reflect.Reflection;
-import sun.reflect.misc.ReflectUtil;
+import com.mobanisto.sun.invoke.util.ValueConversions;
+import com.mobanisto.sun.invoke.util.VerifyAccess;
+import com.mobanisto.sun.invoke.util.Wrapper;
+import com.mobanisto.sun.reflect.CallerSensitive;
+import com.mobanisto.sun.reflect.Reflection;
+import com.mobanisto.sun.reflect.misc.ReflectUtil;
 import sun.security.util.SecurityConstants;
-import java.lang.invoke.LambdaForm.BasicType;
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandleImpl.Intrinsic;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
+import com.mobanisto.invoke.LambdaForm.BasicType;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleImpl.Intrinsic;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -755,8 +755,8 @@ public class MethodHandles {
          * be initialized, if it has not already been initialized.
          * <p><b>Example:</b>
          * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle MH_asList = publicLookup().findStatic(Arrays.class,
   "asList", methodType(List.class, Object[].class));
@@ -813,8 +813,8 @@ assertEquals("[x, y]", MH_asList.invoke("x", "y").toString());
          *
          * <b>Example:</b>
          * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle MH_concat = publicLookup().findVirtual(String.class,
   "concat", methodType(String.class, String.class));
@@ -889,8 +889,8 @@ assertEquals("", (String) MH_newString.invokeExact());
          * be initialized, if it has not already been initialized.
          * <p><b>Example:</b>
          * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle MH_newArrayList = publicLookup().findConstructor(
   ArrayList.class, methodType(void.class, Collection.class));
@@ -952,8 +952,8 @@ assertEquals("[x, y, z]", pb.command().toString());
          * to access instance initialization methods in a safe manner.)</em>
          * <p><b>Example:</b>
          * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 static class Listie extends ArrayList {
   public String toString() { return "[wee Listie]"; }
@@ -1117,8 +1117,8 @@ assertEquals(""+l, (String) MH_this.invokeExact(subl)); // Listie method
          * <p>
          * This is equivalent to the following code:
          * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle mh0 = lookup().findVirtual(defc, name, type);
 MethodHandle mh1 = mh0.bindTo(receiver);
@@ -2075,8 +2075,8 @@ return invoker;
      * incoming arguments which are not mentioned in the reordering array
      * are may be any type, as determined only by {@code newType}.
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodType intfn1 = methodType(int.class, int.class);
 MethodType intfn2 = methodType(int.class, int.class, int.class);
@@ -2422,8 +2422,8 @@ assert((int)twice.invokeExact(21) == 42);
      * <p>
      * <b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle cat = lookup().findVirtual(String.class,
   "concat", methodType(String.class, String.class));
@@ -2498,8 +2498,8 @@ assertEquals("yz", (String) d0.invokeExact(123, "x", "y", "z"));
      * <p>
      * <b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle cat = lookup().findVirtual(String.class,
   "concat", methodType(String.class, String.class));
@@ -2564,8 +2564,8 @@ assertEquals("xz", (String) d12.invokeExact("x", 12, true, "z"));
      * which do not correspond to argument positions in the target.
      * <p><b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle cat = lookup().findVirtual(String.class,
   "concat", methodType(String.class, String.class));
@@ -2668,8 +2668,8 @@ assertEquals("XY", (String) f2.invokeExact("x", "y")); // XY
      * {@code pos} must also be less than or equal to the target's arity.
      * <p><b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle deepToString = publicLookup()
   .findStatic(Arrays.class, "deepToString", methodType(String.class, Object[].class));
@@ -2793,8 +2793,8 @@ assertEquals("[top, [[up, down, strange], charm], bottom]",
      * return type of the target.
      * <p><b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle cat = lookup().findVirtual(String.class,
   "concat", methodType(String.class, String.class));
@@ -2891,8 +2891,8 @@ System.out.println((int) f0.invokeExact("x", "y")); // 2
      * target.)
      * <p><b>Example:</b>
      * <blockquote><pre>{@code
-import static java.lang.invoke.MethodHandles.*;
-import static java.lang.invoke.MethodType.*;
+import static com.mobanisto.invoke.MethodHandles.*;
+import static com.mobanisto.invoke.MethodType.*;
 ...
 MethodHandle trace = publicLookup().findVirtual(java.io.PrintStream.class,
   "println", methodType(void.class, String.class))

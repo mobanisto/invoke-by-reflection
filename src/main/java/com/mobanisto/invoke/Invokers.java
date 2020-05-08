@@ -28,10 +28,10 @@ package com.mobanisto.invoke;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandleNatives.Constants.*;
-import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
-import static java.lang.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandleNatives.Constants.*;
+import static com.mobanisto.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
+import static com.mobanisto.invoke.LambdaForm.*;
 
 /**
  * Construction and caching of often-used invokers.

@@ -28,8 +28,8 @@ package com.mobanisto.invoke;
 import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Opcodes;
 import jdk.internal.org.objectweb.asm.Type;
-import sun.invoke.util.BytecodeDescriptor;
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.BytecodeDescriptor;
+import com.mobanisto.sun.invoke.util.Wrapper;
 import static sun.invoke.util.Wrapper.*;
 
 class TypeConvertingMethodAdapter extends MethodVisitor {

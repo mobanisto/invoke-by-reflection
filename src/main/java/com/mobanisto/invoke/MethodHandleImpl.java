@@ -32,15 +32,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.function.Function;
 
-import sun.invoke.empty.Empty;
-import sun.invoke.util.ValueConversions;
-import sun.invoke.util.VerifyType;
-import sun.invoke.util.Wrapper;
-import sun.reflect.CallerSensitive;
-import sun.reflect.Reflection;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
+import com.mobanisto.sun.invoke.empty.Empty;
+import com.mobanisto.sun.invoke.util.ValueConversions;
+import com.mobanisto.sun.invoke.util.VerifyType;
+import com.mobanisto.sun.invoke.util.Wrapper;
+import com.mobanisto.sun.reflect.CallerSensitive;
+import com.mobanisto.sun.reflect.Reflection;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
 
 /**
  * Trusted implementation code for MethodHandle.

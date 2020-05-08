@@ -26,12 +26,12 @@
 package com.mobanisto.invoke;
 
 import static jdk.internal.org.objectweb.asm.Opcodes.*;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
-import java.lang.invoke.LambdaForm.NamedFunction;
-import java.lang.invoke.MethodHandles.Lookup;
+import com.mobanisto.invoke.LambdaForm.NamedFunction;
+import com.mobanisto.invoke.MethodHandles.Lookup;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.function.Function;
@@ -39,8 +39,8 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 import jdk.internal.org.objectweb.asm.FieldVisitor;
-import sun.invoke.util.ValueConversions;
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.ValueConversions;
+import com.mobanisto.sun.invoke.util.Wrapper;
 
 import jdk.internal.org.objectweb.asm.ClassWriter;
 import jdk.internal.org.objectweb.asm.MethodVisitor;

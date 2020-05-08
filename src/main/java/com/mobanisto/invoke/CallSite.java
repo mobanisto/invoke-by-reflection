@@ -25,9 +25,9 @@
 
 package com.mobanisto.invoke;
 
-import sun.invoke.empty.Empty;
-import static java.lang.invoke.MethodHandleStatics.*;
-import static java.lang.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
+import com.mobanisto.sun.invoke.empty.Empty;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.MethodHandles.Lookup.IMPL_LOOKUP;
 
 /**
  * A {@code CallSite} is a holder for a variable {@link MethodHandle},

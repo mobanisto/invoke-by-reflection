@@ -27,13 +27,13 @@ package com.mobanisto.invoke;
 
 import java.lang.ref.SoftReference;
 import java.util.Arrays;
-import static java.lang.invoke.LambdaForm.*;
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleImpl.Intrinsic;
+import static com.mobanisto.invoke.LambdaForm.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleImpl.Intrinsic;
 import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.Wrapper;
 
 /** Transforms on LFs.
  *  A lambda-form editor can derive new LFs from its base LF.

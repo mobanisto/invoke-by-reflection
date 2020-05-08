@@ -25,8 +25,8 @@
 
 package com.mobanisto.invoke;
 
-import static java.lang.invoke.LambdaForm.BasicType.*;
-import static java.lang.invoke.MethodHandleStatics.*;
+import static com.mobanisto.invoke.LambdaForm.BasicType.*;
+import static com.mobanisto.invoke.MethodHandleStatics.*;
 
 /**
  * A method handle whose behavior is determined only by its LambdaForm.

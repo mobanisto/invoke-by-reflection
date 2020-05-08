@@ -24,7 +24,7 @@
  */
 package com.mobanisto.invoke;
 
-import sun.invoke.util.Wrapper;
+import com.mobanisto.sun.invoke.util.Wrapper;
 
 import static sun.invoke.util.Wrapper.forPrimitiveType;
 import static sun.invoke.util.Wrapper.forWrapperType;
