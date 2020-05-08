@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 /**
  * Thrown to indicate that code has attempted to call a method handle

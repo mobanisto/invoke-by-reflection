@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 import java.lang.invoke.MethodHandles.Lookup;
 import java.lang.reflect.Field;

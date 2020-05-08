@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 /**
  * A {@code ConstantCallSite} is a {@link CallSite} whose target is permanent, and can never be changed.

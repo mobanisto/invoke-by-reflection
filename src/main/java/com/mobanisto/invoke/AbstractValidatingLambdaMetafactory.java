@@ -22,7 +22,7 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 import sun.invoke.util.Wrapper;
 

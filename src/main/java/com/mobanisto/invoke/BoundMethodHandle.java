@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 import static jdk.internal.org.objectweb.asm.Opcodes.*;
 import static java.lang.invoke.LambdaForm.*;

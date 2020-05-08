@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 /**
  * A {@code VolatileCallSite} is a {@link CallSite} whose target acts like a volatile variable.

@@ -23,7 +23,7 @@
  * questions.
  */
 
-package java.lang.invoke;
+package com.mobanisto.invoke;
 
 import sun.invoke.empty.Empty;
 import static java.lang.invoke.MethodHandleStatics.*;
